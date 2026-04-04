@@ -1,7 +1,20 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Terms = () => {
+  useEffect(() => {
+    const meta = document.querySelector('meta[name="description"]');
+    const prevContent = meta?.getAttribute("content") ?? "";
+    const prevTitle = document.title;
+    meta?.setAttribute("content", "Waylena Terms of Service — the rules and guidelines for using the Waylena app and website.");
+    document.title = "Terms of Service | Waylena";
+    return () => {
+      meta?.setAttribute("content", prevContent);
+      document.title = prevTitle;
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

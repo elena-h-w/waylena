@@ -9,10 +9,14 @@ const Navbar = () => {
         <Link to="/" className="text-2xl font-heading font-bold text-foreground tracking-tight">
           Waylena
         </Link>
-        <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
-          <button className="bg-primary text-primary-foreground hover:bg-primary/85 font-semibold rounded-full px-5 py-2 text-sm transition-all">
-            Join the Beta
-          </button>
+        <a
+          href={BETA_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Join the Waylena beta program"
+          className="bg-primary text-primary-foreground hover:bg-primary/85 font-semibold rounded-full px-5 py-2 text-sm transition-all"
+        >
+          Join the Beta
         </a>
       </div>
     </nav>

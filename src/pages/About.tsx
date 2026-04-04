@@ -1,7 +1,20 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const About = () => {
+  useEffect(() => {
+    const meta = document.querySelector('meta[name="description"]');
+    const prevContent = meta?.getAttribute("content") ?? "";
+    const prevTitle = document.title;
+    meta?.setAttribute("content", "Waylena was built by Elena Wang, a marketing professional who wanted a simple way to track career conversations and follow up strategically.");
+    document.title = "About | Waylena";
+    return () => {
+      meta?.setAttribute("content", prevContent);
+      document.title = prevTitle;
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

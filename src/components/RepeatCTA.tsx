@@ -9,11 +9,11 @@ const RepeatCTA = () => {
         <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-8">
           Ready to network with intention?
         </h2>
-        <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
-          <Button variant="hero" size="lg" className="px-10 py-6 text-lg">
+        <Button variant="hero" size="lg" className="px-10 py-6 text-lg" asChild>
+          <a href={BETA_URL} target="_blank" rel="noopener noreferrer" aria-label="Join the Waylena beta program — it's free">
             Join the Beta — It's Free
-          </Button>
-        </a>
+          </a>
+        </Button>
       </div>
     </section>
   );

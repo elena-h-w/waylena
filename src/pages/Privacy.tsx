@@ -1,7 +1,20 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Privacy = () => {
+  useEffect(() => {
+    const meta = document.querySelector('meta[name="description"]');
+    const prevContent = meta?.getAttribute("content") ?? "";
+    const prevTitle = document.title;
+    meta?.setAttribute("content", "Waylena Privacy Policy — learn how we collect, use, and protect your personal information.");
+    document.title = "Privacy Policy | Waylena";
+    return () => {
+      meta?.setAttribute("content", prevContent);
+      document.title = prevTitle;
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

@@ -24,9 +24,11 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="hero" className="w-full py-5">Join the Beta — It's Free</Button>
-            </a>
+            <Button variant="hero" className="w-full py-5" asChild>
+              <a href={BETA_URL} target="_blank" rel="noopener noreferrer" aria-label="Join the Waylena beta program — it's free">
+                Join the Beta — It's Free
+              </a>
+            </Button>
           </div>
 
           {/* Premium */}
