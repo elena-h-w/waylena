@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
+import AppStoreBadge from "./AppStoreBadge";
 
-const BETA_URL = "https://forms.gle/JFfq4jDLSX9sEcpX8";
+const navLinks = [
+  { label: "Features", to: "/#features" },
+  { label: "Process", to: "/#how-it-works" },
+  { label: "Pricing", to: "/#pricing" },
+  { label: "About", to: "/about" },
+];
 
 const Navbar = () => {
   return (
@@ -9,15 +15,18 @@ const Navbar = () => {
         <Link to="/" className="text-2xl font-heading font-bold text-foreground tracking-tight">
           Waylena
         </Link>
-        <a
-          href={BETA_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Join the Waylena beta program"
-          className="bg-primary text-primary-foreground hover:bg-primary/85 font-semibold rounded-full px-5 py-2 text-sm transition-all"
-        >
-          Join the Beta
-        </a>
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              to={link.to}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+        <AppStoreBadge imgClassName="h-9" />
       </div>
     </nav>
   );

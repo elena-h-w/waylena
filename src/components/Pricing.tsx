@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles } from "lucide-react";
+import AppStoreBadge from "./AppStoreBadge";
 
-const BETA_URL = "https://forms.gle/JFfq4jDLSX9sEcpX8";
 
 const Pricing = () => {
   return (
-    <section className="py-20 px-6 bg-card">
+    <section id="pricing" className="py-20 px-6 scroll-mt-20">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground text-center mb-16">
           Simple pricing
@@ -14,7 +14,7 @@ const Pricing = () => {
           {/* Free Beta */}
           <div className="p-8 rounded-2xl border-2 border-primary bg-background">
             <div className="text-sm font-semibold text-primary mb-2">Available Now</div>
-            <h3 className="text-2xl font-heading font-bold text-foreground mb-1">Free Beta</h3>
+            <h3 className="text-2xl font-heading font-bold text-foreground mb-1">Free</h3>
             <p className="text-3xl font-bold text-foreground mb-6">$0</p>
             <ul className="space-y-3 mb-8">
               {["Log unlimited conversations", "Set follow-up reminders", "Tag and organize contacts", "Networking insights"].map((item) => (
@@ -24,11 +24,9 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <Button variant="hero" className="w-full py-5" asChild>
-              <a href={BETA_URL} target="_blank" rel="noopener noreferrer" aria-label="Join the Waylena beta program — it's free">
-                Join the Beta — It's Free
-              </a>
-            </Button>
+            <div className="flex justify-center">
+              <AppStoreBadge imgClassName="h-12" />
+            </div>
           </div>
 
           {/* Premium */}

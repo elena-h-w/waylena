@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    --background: 40 23% 95%;
+    --background: 43 30% 95.5%;
     --foreground: 36 18% 9%;
 
-    --card: 40 20% 97%;
+    --card: 43 30% 95.5%;
     --card-foreground: 36 18% 9%;
 
-    --popover: 40 23% 95%;
+    --popover: 43 30% 95.5%;
     --popover-foreground: 36 18% 9%;
 
     --primary: 148 35% 26%;
@@ -34,7 +34,7 @@
 
     --radius: 0.5rem;
 
-    --sidebar-background: 40 20% 97%;
+    --sidebar-background: 43 30% 95.5%;
     --sidebar-foreground: 36 18% 9%;
     --sidebar-primary: 148 35% 26%;
     --sidebar-primary-foreground: 40 23% 95%;
@@ -48,6 +48,10 @@
 @layer base {
   * {
     @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {

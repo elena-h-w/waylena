@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
-
-const BETA_URL = "https://forms.gle/JFfq4jDLSX9sEcpX8";
+import DownloadCTA from "./DownloadCTA";
 
 const Hero = () => {
   return (
@@ -13,11 +11,7 @@ const Hero = () => {
           Log conversations. Follow up. Land opportunities.
         </p>
         <div className="animate-fade-up" style={{ animationDelay: "0.3s" }}>
-          <Button variant="hero" size="lg" className="px-10 py-6 text-lg" asChild>
-            <a href={BETA_URL} target="_blank" rel="noopener noreferrer" aria-label="Join the Waylena beta program — it's free">
-              Join the Beta — It's Free
-            </a>
-          </Button>
+          <DownloadCTA />
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ const EmailSignup = () => {
           Stay in the loop
         </h2>
         <p className="text-lg text-muted-foreground mb-8">
-          Be the first to hear about Waylena updates, new features, and launch news.
+          Be the first to hear about Waylena updates and new features.
         </p>
         <KitForm />
       </div>

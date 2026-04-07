@@ -1,19 +1,13 @@
-import { Button } from "@/components/ui/button";
-
-const BETA_URL = "https://forms.gle/JFfq4jDLSX9sEcpX8";
+import DownloadCTA from "./DownloadCTA";
 
 const RepeatCTA = () => {
   return (
-    <section className="py-20 px-6 bg-card">
+    <section className="py-20 px-6">
       <div className="container mx-auto max-w-2xl text-center">
         <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-8">
           Ready to network with intention?
         </h2>
-        <Button variant="hero" size="lg" className="px-10 py-6 text-lg" asChild>
-          <a href={BETA_URL} target="_blank" rel="noopener noreferrer" aria-label="Join the Waylena beta program — it's free">
-            Join the Beta — It's Free
-          </a>
-        </Button>
+        <DownloadCTA />
       </div>
     </section>
   );

@@ -35,7 +35,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-20 px-6">
+    <section id="features" className="py-20 px-6 scroll-mt-20">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground text-center mb-16">
           Everything you need to network with intention
