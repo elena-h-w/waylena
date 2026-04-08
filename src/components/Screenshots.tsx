@@ -1,12 +1,11 @@
 const row1 = [
-  { src: "/screenshots/screenshot-1.png", alt: "Waylena app screenshot 1", rotate: "-3deg" },
-  { src: "/screenshots/screenshot-2.png", alt: "Waylena app screenshot 2", rotate: "2deg" },
+  { src: "/screenshots/screenshot-2.png", alt: "Waylena app screenshot 2", rotate: "-3deg" },
+  { src: "/screenshots/screenshot-3.png", alt: "Waylena app screenshot 3", rotate: "2deg" },
 ];
 
 const row2 = [
-  { src: "/screenshots/screenshot-3.png", alt: "Waylena app screenshot 3", rotate: "-2deg" },
-  { src: "/screenshots/screenshot-4.png", alt: "Waylena app screenshot 4", rotate: "1deg" },
-  { src: "/screenshots/screenshot-5.png", alt: "Waylena app screenshot 5", rotate: "-3deg" },
+  { src: "/screenshots/screenshot-4.png", alt: "Waylena app screenshot 4", rotate: "3deg" },
+  { src: "/screenshots/screenshot-5.png", alt: "Waylena app screenshot 5", rotate: "-2deg" },
 ];
 
 const Screenshots = () => {
@@ -29,7 +28,7 @@ const Screenshots = () => {
             </div>
           ))}
         </div>
-        {/* Row 2 — 3 screenshots */}
+        {/* Row 2 — 2 screenshots */}
         <div className="flex items-center justify-center gap-4 md:gap-8">
           {row2.map((screenshot, index) => (
             <div
