@@ -35,9 +35,9 @@ const About = () => {
             <p>
               I believe the problem is real, so I decided to build the solution myself. Waylena is a mobile-first app designed for professionals who want to be more intentional about networking. Whether you're job searching, exploring what's next, or building long-term professional relationships — Waylena helps you stay on top of your network.
             </p>
-            <p className="text-foreground font-medium">
+            <p className="text-foreground font-bold">
               I'd love to hear from you. Reach out anytime at{" "}
-              <a href="mailto:hello@waylena.com" className="text-primary underline underline-offset-4 hover:text-primary/80">
+              <a href="mailto:hello@waylena.com" className="text-primary hover:text-primary/80">
                 hello@waylena.com
               </a>.
             </p>
