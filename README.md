@@ -2,7 +2,7 @@
 
 Networking made simple — log conversations, follow up, land opportunities.
 
-**[Download on the App Store](https://apps.apple.com/us/app/waylena-networking-tracker/id6760172380)**
+Live site: https://waylena.com
 
 ## Overview
 
