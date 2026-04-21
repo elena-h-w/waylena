@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import AppStoreBadge from "./AppStoreBadge";
+import GooglePlayBadge from "./GooglePlayBadge";
 
 const navLinks = [
   { label: "Features", to: "/#features" },
@@ -26,7 +27,10 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <AppStoreBadge imgClassName="h-9" />
+        <div className="flex items-center gap-2">
+          <AppStoreBadge imgClassName="h-8 md:h-9" />
+          <GooglePlayBadge imgClassName="h-8 md:h-9" />
+        </div>
       </div>
     </nav>
   );
