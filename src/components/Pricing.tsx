@@ -26,8 +26,8 @@ const Pricing = () => {
               ))}
             </ul>
             <div className="flex flex-col items-center gap-2">
-              <AppStoreBadge imgClassName="h-12" />
-              <GooglePlayBadge imgClassName="h-12" />
+              <AppStoreBadge imgClassName="w-36 h-auto" />
+              <GooglePlayBadge imgClassName="w-36 h-auto" />
             </div>
           </div>
 
