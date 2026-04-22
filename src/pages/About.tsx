@@ -4,14 +4,91 @@ import Footer from "@/components/Footer";
 
 const About = () => {
   useEffect(() => {
-    const meta = document.querySelector('meta[name="description"]');
-    const prevContent = meta?.getAttribute("content") ?? "";
     const prevTitle = document.title;
-    meta?.setAttribute("content", "Waylena was built by Elena Wang, a marketing professional who wanted a simple way to track career conversations and follow up strategically.");
     document.title = "About | Waylena";
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    const prevDesc = metaDesc?.getAttribute("content") ?? "";
+    metaDesc?.setAttribute("content", "Waylena was built by Elena Wang, a marketing professional who wanted a simple way to track career conversations and follow up strategically.");
+
+    const setOG = (property: string, content: string) => {
+      let el = document.querySelector<HTMLMetaElement>(`meta[property="${property}"]`);
+      const created = !el;
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute("property", property);
+        document.head.appendChild(el);
+      }
+      const prev = el.getAttribute("content") ?? "";
+      el.setAttribute("content", content);
+      return { el, prev, created };
+    };
+
+    const ogTitle = setOG("og:title", "About | Waylena");
+    const ogUrl = setOG("og:url", "https://waylena.com/about");
+    const ogDesc = setOG("og:description", "Waylena was built by Elena Wang, a marketing professional who wanted a simple way to track career conversations and follow up strategically.");
+    const ogSiteName = setOG("og:site_name", "Waylena");
+
+    const schema = document.createElement("script");
+    schema.type = "application/ld+json";
+    schema.id = "about-page-schema";
+    schema.textContent = JSON.stringify([{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "AboutPage",
+          "@id": "https://waylena.com/about/#aboutpage",
+          "url": "https://waylena.com/about",
+          "isPartOf": { "@id": "https://waylena.com/#website" },
+          "about": { "@id": "https://waylena.com/#organization" },
+          "mentions": [{ "@id": "https://waylena.com/#app" }]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://waylena.com/#website",
+          "url": "https://waylena.com/",
+          "name": "Waylena"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://waylena.com/#organization",
+          "name": "Waylena",
+          "url": "https://waylena.com",
+          "logo": "https://waylena.com/logo.svg",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "hello@waylena.com",
+            "contactType": "customer support"
+          },
+          "founder": { "@type": "Person", "name": "Elena Wang" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://waylena.com/#app",
+          "name": "Waylena",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": ["iOS", "Android"],
+          "description": "Log career conversations and follow up with the right person at the right time.",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        }
+      ]
+    }]);
+    document.head.appendChild(schema);
+
     return () => {
-      meta?.setAttribute("content", prevContent);
       document.title = prevTitle;
+      metaDesc?.setAttribute("content", prevDesc);
+
+      const restore = ({ el, prev, created }: { el: HTMLMetaElement; prev: string; created: boolean }) => {
+        if (created) el.remove();
+        else el.setAttribute("content", prev);
+      };
+      restore(ogTitle);
+      restore(ogUrl);
+      restore(ogDesc);
+      restore(ogSiteName);
+
+      document.getElementById("about-page-schema")?.remove();
     };
   }, []);
 

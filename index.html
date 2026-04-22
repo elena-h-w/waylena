@@ -11,6 +11,8 @@
     <meta property="og:title" content="Waylena | Networking made simple" />
     <meta property="og:description" content="Log conversations. Follow up. Land opportunities." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://waylena.com" />
+    <meta property="og:site_name" content="Waylena" />
     <meta property="og:image" content="https://waylena.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -24,33 +26,70 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Waylena",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": ["iOS", "Android"],
-      "description": "Log career conversations and follow up with the right person at the right time.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Waylena",
-      "url": "https://waylena.com",
-      "logo": "https://waylena.com/logo.svg",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "hello@waylena.com",
-        "contactType": "customer support"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://waylena.com/#organization",
+        "name": "Waylena",
+        "url": "https://waylena.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://waylena.com/logo.svg"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "hello@waylena.com",
+            "contactType": "customer support"
+          }
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Elena Wang"
+        }
       },
-      "founder": {
-        "@type": "Person",
-        "name": "Elena Wang"
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://waylena.com/#website",
+        "url": "https://waylena.com/",
+        "name": "Waylena",
+        "publisher": {
+          "@id": "https://waylena.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://waylena.com/#webpage",
+        "url": "https://waylena.com/",
+        "name": "Waylena | Networking made simple",
+        "isPartOf": {
+          "@id": "https://waylena.com/#website"
+        },
+        "about": {
+          "@id": "https://waylena.com/#app"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "@id": "https://waylena.com/#app",
+        "name": "Waylena",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": ["iOS", "Android"],
+        "description": "Log career conversations and follow up with the right person at the right time.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@id": "https://waylena.com/#organization"
+        }
       }
-    }
+    ]
     </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FEP6YQGZW"></script>
