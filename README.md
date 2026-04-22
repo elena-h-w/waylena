@@ -6,7 +6,7 @@ Live site: https://waylena.com
 
 ## Overview
 
-Waylena is a mobile-first app designed for professionals who want to be more intentional about networking — job seekers, career explorers, and anyone who wants to stay on top of the connections that matter.
+Waylena is a mobile networking tracker app designed for professionals who want to be more intentional about networking — job seekers, career explorers, and anyone who wants to stay on top of the connections that matter.
 
 The project started as a personal frustration: great conversations fade, follow-ups slip, and valuable connections get lost not because of bad intentions — but bad systems. Waylena is the dedicated space to fix that.
 

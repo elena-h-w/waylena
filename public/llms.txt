@@ -1,0 +1,41 @@
+# Waylena
+
+> Waylena is a mobile networking tracker app that helps professionals log career conversations, set follow-up reminders, and build meaningful professional relationships over time.
+
+## What Waylena does
+
+Most professionals don't have a networking problem — they have a follow-up problem. Great conversations happen, advice gets shared, intros get offered, and then life gets in the way. The details fade, the follow-up never gets sent, and a valuable connection slips through the cracks.
+
+Waylena solves this by giving professionals a simple, dedicated place to capture what happens in career conversations and follow up before the moment passes.
+
+## Features
+
+- **Log conversations** — Coffee chats, mentor meetings, networking events, all in one place
+- **Capture advice & commitments** — Record key takeaways and promises so nothing gets lost
+- **Tag topics** — Organize by Career Pivot, Job Lead, Role Advice, Industry Insights, and more
+- **Follow-up reminders** — Timely nudges to reconnect before the window closes
+- **Networking insights** — See patterns in your networking activity and spot gaps
+- **Track top connections** — Know who your most valuable professional relationships are
+
+## Pricing
+
+- **Free** — Available now on iOS and Android. Includes unlimited conversation logging, follow-up reminders, topic tagging, and networking insights. No credit card required.
+- **Premium** — Coming soon. Will include AI-powered monthly narrative synthesis, smart follow-up suggestions, and advanced analytics.
+
+## Download
+
+- iOS: https://apps.apple.com/app/id6760172380
+- Android: https://play.google.com/store/apps/details?id=com.elenahw.Waylena
+
+## About
+
+Waylena was built by Elena Wang, a marketing professional who wanted a simple way to track career conversations and follow up strategically. She built Waylena for professionals who are job searching, exploring what's next, or building long-term professional relationships.
+
+Contact: hello@waylena.com
+
+## Pages
+
+- Homepage: https://waylena.com
+- About: https://waylena.com/about
+- Privacy Policy: https://waylena.com/privacy
+- Terms of Service: https://waylena.com/terms
